@@ -22,8 +22,8 @@ No theory dumps. No "it depends." Just the code that works and the traps that do
 | 01 | Deduplication                | `row_number()`, window functions, idempotency | Coming soon   |
 | 02 | Top N per Group              | `rank()` vs `dense_rank()`, partition pruning | Coming soon   |
 | 03 | Handling Data Skew           | Salting, broadcast joins, AQE                 | Coming soon   |
-| **04** | **[SCD Type 2 MERGE](scenarios/04-scd-type-2/)** | **Delta MERGE, two-step pattern, lazy eval trap** | **✅ Available** |
-| 05 | Exploding Nested JSON        | `explode()`, `from_json()`, schema inference  | Coming soon   |
+| 04 | **[SCD Type 2 MERGE](scenarios/04-scd-type-2/)** | Delta MERGE, two-step pattern, lazy eval trap | ✅ Available |
+| 05 | **[Exploding Nested JSON](scenarios/05-exploding-nested-json/)** | `explode()`, `from_json()`, schema inference  | ✅ Available   |
 
 > Each scenario folder has its own README with the interview question, approach, pitfalls, and expected output.
 
@@ -56,9 +56,12 @@ pyspark-interview-scenarios/
 ├── LICENSE
 ├── .gitignore
 └── scenarios/
-    └── 04-scd-type-2/
-        ├── README.md       ← Interview question, approach, pitfalls
-        └── scd_type_2_delta_merge.py  ← Databricks notebook
+    ├── 04-scd-type-2/
+    │   ├── README.md
+    │   └── scd_type_2_delta_merge.py
+    └── 05-exploding-nested-json/
+        ├── README.md
+        └── exploding_nested_json.py
 ```
 
 As more scenarios ship, each gets its own folder under `scenarios/`.
